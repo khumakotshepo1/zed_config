@@ -6,7 +6,6 @@
   /* ========================================== */
   "lsp": {
     "vtsls": {
-      "enable_lsp_tasks": true,
       "settings": {
         "typescript": {
           "updateImportsOnFileMove": {
@@ -79,10 +78,10 @@
           "name": "biome"
         }
       },
-      "code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      }
+      "code_actions_on_format": [
+        "source.fixAll.biome",
+        "source.organizeImports.biome"
+      ]
     },
     "JSX": {
       "formatter": {
@@ -90,20 +89,16 @@
           "name": "biome"
         }
       },
-      "code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      }
+      "code_actions_on_format": [
+        "source.fixAll.biome",
+        "source.organizeImports.biome"
+      ]
     },
     "SQL": {
       "formatter": {
         "external": {
           "command": "npx",
-          "arguments": [
-            "sql-formatter",
-            "--config",
-            "{}"
-          ]
+          "arguments": ["sql-formatter", "--config", "{}"]
         }
       }
     },
@@ -120,10 +115,10 @@
           "name": "biome"
         }
       },
-      "code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      }
+      "code_actions_on_format": [
+        "source.fixAll.biome",
+        "source.organizeImports.biome"
+      ]
     },
     "TSX": {
       "formatter": {
@@ -131,10 +126,10 @@
           "name": "biome"
         }
       },
-      "code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      }
+      "code_actions_on_format": [
+        "source.fixAll.biome",
+        "source.organizeImports.biome"
+      ]
     },
     "Vue.js": {
       "formatter": {

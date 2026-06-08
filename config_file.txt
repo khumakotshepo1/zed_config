@@ -1,5 +1,5 @@
 {
-  "$schema": "https://zed.dev",
+  "theme": "Gruvbox Dark Hard",
 
   /* ========================================== */
   /* 1. LANGUAGE SERVER (LSP) INTEGRATIONS      */
@@ -9,195 +9,108 @@
       "settings": {
         "typescript": {
           "updateImportsOnFileMove": {
-            "enabled": "always"
-          }
+            "enabled": "always",
+          },
         },
         "javascript": {
           "updateImportsOnFileMove": {
-            "enabled": "always"
-          }
-        }
-      }
+            "enabled": "always",
+          },
+        },
+      },
     },
     "biome": {
       "settings": {
-        "require_config_file": true
-      }
-    }
+        "require_config_file": true,
+      },
+    },
   },
 
   /* ========================================== */
   /* 2. LANGUAGE-SPECIFIC SCOPED CONFIGS        */
   /* ========================================== */
   "languages": {
-    "Astro": {
-      "formatter": {
-        "language_server": {
-          "name": "biome"
-        }
-      }
-    },
-    "CSS": {
-      "formatter": {
-        "language_server": {
-          "name": "biome"
-        }
-      }
-    },
-    "GraphQL": {
-      "formatter": {
-        "language_server": {
-          "name": "biome"
-        }
-      }
-    },
-    "HTML": {
-      "formatter": {
-        "language_server": {
-          "name": "biome"
-        }
-      }
-    },
-    "JSON": {
-      "formatter": {
-        "language_server": {
-          "name": "biome"
-        }
-      }
-    },
-    "JSONC": {
-      "formatter": {
-        "language_server": {
-          "name": "biome"
-        }
-      }
-    },
     "JavaScript": {
       "formatter": {
         "language_server": {
-          "name": "biome"
-        }
+          "name": "biome",
+        },
       },
-      "code_actions_on_format": [
-        "source.fixAll.biome",
-        "source.organizeImports.biome"
-      ]
+      // Fixed: Converted from an Array into a schema-valid Key-Value Object
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true,
+      },
     },
     "JSX": {
       "formatter": {
         "language_server": {
-          "name": "biome"
-        }
+          "name": "biome",
+        },
       },
-      "code_actions_on_format": [
-        "source.fixAll.biome",
-        "source.organizeImports.biome"
-      ]
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true,
+      },
     },
     "SQL": {
       "formatter": {
         "external": {
           "command": "npx",
-          "arguments": ["sql-formatter", "--config", "{}"]
-        }
-      }
-    },
-    "Svelte": {
-      "formatter": {
-        "language_server": {
-          "name": "biome"
-        }
-      }
+          "arguments": ["sql-formatter"],
+        },
+      },
     },
     "TypeScript": {
       "formatter": {
         "language_server": {
-          "name": "biome"
-        }
+          "name": "biome",
+        },
       },
-      "code_actions_on_format": [
-        "source.fixAll.biome",
-        "source.organizeImports.biome"
-      ]
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true,
+      },
     },
     "TSX": {
       "formatter": {
         "language_server": {
-          "name": "biome"
-        }
+          "name": "biome",
+        },
       },
-      "code_actions_on_format": [
-        "source.fixAll.biome",
-        "source.organizeImports.biome"
-      ]
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true,
+      },
     },
-    "Vue.js": {
-      "formatter": {
-        "language_server": {
-          "name": "biome"
-        }
-      }
-    }
   },
 
   /* ========================================== */
   /* 3. EDITOR TYPOGRAPHY & DESIGN CONTROLS     */
   /* ========================================== */
-  "ui_font_family": "Dank Mono",
   "ui_font_size": 20,
-  "buffer_font_family": "Cascadia Code",
   "buffer_font_size": 20,
   "agent_buffer_font_size": 20,
   "buffer_line_height": {
-    "custom": 1.5
+    "custom": 1.5,
   },
   "tab_size": 2,
 
   /* ========================================== */
-  /* 4. THEMING & VISUAL OVERRIDES              */
-  /* ========================================== */
-  "theme": "Aura Dark",
-  "icon_theme": "Colored Zed Icons Theme Dark",
-  "theme_overrides": {
-    "Aura Dark": {
-      "border": "#15141C",
-      "border.variant": "#15141C",
-      "panel.background": "#15141C",
-      "title_bar.background": "#15141C",
-      "panel.focused_border": "#4E466E",
-      "editor.document_highlight.read_background": "#00000000",
-      "editor.document_highlight.write_background": "#00000000",
-      "players": [
-        {
-          "cursor": "#BD9DFF"
-        }
-      ],
-      "syntax": {
-        "comment": {
-          "font_style": "italic"
-        },
-        "comment.doc": {
-          "font_style": "italic"
-        }
-      }
-    }
-  },
-
-  /* ========================================== */
-  /* 5. INTERFACE PANELS & WORKSPACE LAYOUT     */
+  /* 4. INTERFACE PANELS & WORKSPACE LAYOUT     */
   /* ========================================== */
   "cli_default_open_behavior": "existing_window",
   "title_bar": {
     "show_onboarding_banner": false,
     "show_project_items": false,
     "show_branch_name": false,
-    "show_user_menu": true
+    "show_user_menu": true,
   },
   "tab_bar": {
-    "show": false
+    "show": false,
   },
   "toolbar": {
-    "quick_actions": false
+    "quick_actions": false,
   },
   "project_panel": {
     "dock": "right",
@@ -207,45 +120,46 @@
     "auto_fold_dirs": false,
     "git_status": false,
     "scrollbar": {
-      "show": "never"
+      "show": "never",
     },
     "indent_guides": {
-      "show": "never"
-    }
+      "show": "never",
+    },
   },
   "outline_panel": {
     "default_width": 300,
     "indent_guides": {
-      "show": "never"
-    }
+      "show": "never",
+    },
   },
   "file_finder": {
-    "modal_max_width": "large"
+    "modal_max_width": "large",
   },
   "centered_layout": {
     "left_padding": 0.15,
-    "right_padding": 0.15
+    "right_padding": 0.15,
   },
 
   /* ========================================== */
-  /* 6. BUFFER GUTTER & MINIMALIST PREFERENCES  */
+  /* 5. BUFFER GUTTER & MINIMALIST PREFERENCES  */
   /* ========================================== */
   "gutter": {
-    "min_line_number_digits": 0,
+    "line_numbers": true,
     "folds": false,
-    "runnables": false
+    "runnables": false,
   },
+  "relative_line_numbers": "enabled",
   "scrollbar": {
-    "show": "never"
+    "show": "never",
   },
   "indent_guides": {
-    "enabled": false
+    "enabled": false,
   },
   "current_line_highlight": "none",
   "show_whitespaces": "none",
 
   /* ========================================== */
-  /* 7. BEHAVIOUR, COMPLETIONS, & SAVE SETTINGS */
+  /* 6. BEHAVIOUR, COMPLETIONS, & SAVE SETTINGS */
   /* ========================================== */
   "vim_mode": true,
   "cursor_shape": "bar",
@@ -253,7 +167,7 @@
   "multi_cursor_modifier": "cmd_or_ctrl",
   "selection_highlight": false,
   "drag_and_drop_selection": {
-    "enabled": false
+    "enabled": false,
   },
   "seed_search_query_from_cursor": "never",
   "auto_indent": "none",
@@ -270,19 +184,19 @@
   "vertical_scroll_margin": 1,
 
   /* ========================================== */
-  /* 8. GIT & SESSION LIFECYCLE MANAGEMENT      */
+  /* 7. GIT & SESSION LIFECYCLE MANAGEMENT      */
   /* ========================================== */
   "git": {
     "git_gutter": "hide",
     "inline_blame": {
-      "enabled": true
-    }
+      "enabled": true,
+    },
   },
   "when_closing_with_no_tabs": "keep_window_open",
   "close_on_file_delete": true,
   "restore_on_file_reopen": false,
   "restore_on_startup": "last_session",
   "session": {
-    "restore_unsaved_buffers": false
-  }
+    "restore_unsaved_buffers": false,
+  },
 }

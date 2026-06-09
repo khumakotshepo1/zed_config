@@ -83,6 +83,12 @@
         "source.organizeImports.biome": true,
       },
     },
+    "CSS": {
+      "language_servers": [
+        "tailwindcss-language-server",
+        "!vscode-css-language-server"
+      ]
+    }
   },
 
   /* ========================================== */
